@@ -19,10 +19,10 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout />}>
         <Route path='' element={<Home />} />
         <Route path='about' element={<About />} />
+        <Route path='projects' element={<Projects />} />
         <Route path='alumni' element={<Alumni />} />
         <Route path='contact' element={<Contact />} />
         <Route path='events' element={<Events />} />
-        <Route path='projects' element={<Projects />} />
         <Route path='register' element={<Register />} />
         <Route path='team' element={<Team />} />
     </Route>

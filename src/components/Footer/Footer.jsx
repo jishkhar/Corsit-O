@@ -11,6 +11,7 @@ const Footer = () => {
   return (
     <>
       <footer class="relative bg-blueGray-200 pt-8 pb-6">
+      <hr class="my-6 border-blueGray-300" />
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap text-left lg:text-left">
             <div class="w-full lg:w-6/12 px-4">
@@ -95,8 +96,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <hr class="my-6 border-blueGray-300" />
-
         </div>
       </footer>
     </>

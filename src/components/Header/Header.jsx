@@ -17,11 +17,11 @@ const Header = () => {
     ];
 
     return (
-        <header className='bg-slate-100'>
+        <header className='bg-[#171717]'>
             <nav className='flex justify-between items-center w-[92%] mx-auto py-6'>
                 <div>
                     <Link to='/'>
-                        <div className='text-black'>
+                        <div>
                             <img src={logo} alt='Logo' className='w-[3.5rem]' />
                         </div>
                     </Link>
@@ -35,7 +35,7 @@ const Header = () => {
                                     <NavLink 
                                         to={path} 
                                         className={({ isActive }) => 
-                                            `block py-2 pr-4 pl-3 text-[1.375rem] duration-200 ${isActive ? 'text-red-600' : 'text-black'} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-red-600 lg:p-0`
+                                            `block py-2 pr-4 pl-3 text-[1.375rem] duration-200 ${isActive ? 'text-red-600' : 'text-white'} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-red-600 lg:p-0`
                                         }
                                     >
                                         {label}

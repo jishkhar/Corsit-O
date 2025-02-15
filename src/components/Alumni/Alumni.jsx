@@ -450,13 +450,13 @@ const people = [
 
 export default function Alumni() {
   return (
-    <div className="bg-slate-800 text-white py-20 sm:py-40">
+    <div className="py-20 sm:py-40">
       <div className="pt-8 mx-auto max-w-screen-2xl px-8 lg:px-12 flex flex-col items-center text-center">
         <div className="max-w-3xl">
-          <h2 className="text-6xl font-bold tracking-tight text-white sm:text-7xl">
+          <h2 className="text-6xl font-bold tracking-tight sm:text-7xl">
             Meet our Alumni
           </h2>
-          <p className="mt-8 text-xl leading-9 text-white">
+          <p className="mt-8 text-xl leading-9">
             Carrying Forward the Legacy and Making an Impact!
           </p>
         </div>
@@ -465,10 +465,10 @@ export default function Alumni() {
             <li key={i} className="flex flex-col items-center text-center rounded-md py-5 px-3 border-2">
               <img className="h-30 w-30 rounded-full" src={person.ima} alt="" />
               <div className="mt-5">
-                <h3 className="text-xl font-semibold leading-7 tracking-tight text-white">
+                <h3 className="text-xl font-semibold leading-7 tracking-tight">
                   {person.name}
                 </h3>
-                <p className="text-md font-semibold leading-6 text-sky-600">
+                <p className="text-md font-semibold leading-6">
                   {person.role}
                 </p>
                 <a href={person.linkedin} target="_blank" rel="noreferrer">
@@ -480,6 +480,5 @@ export default function Alumni() {
         </ul>
       </div>
     </div>
-
   );
 }

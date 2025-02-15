@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import logo from '../../assets/logo.png';
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
@@ -20,7 +21,9 @@ const Header = () => {
             <nav className='flex justify-between items-center w-[92%] mx-auto py-6'>
                 <div>
                     <Link to='/'>
-                        <div className='text-black'>corsit</div>
+                        <div className='text-black'>
+                            <img src={logo} alt='Logo' className='w-[3.5rem]' />
+                        </div>
                     </Link>
                 </div>
 

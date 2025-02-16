@@ -3,7 +3,9 @@ import React from 'react'
 const Events = () => {
   return (
     <>
-      Event
+      <div className='h-screen'>
+        Event
+      </div>
     </>
   )
 }

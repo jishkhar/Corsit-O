@@ -337,8 +337,8 @@ const people = [
 const Team = () => {
   return (
     <>
-      <div className="w-full py-[7rem] px-4 z-50">
-        <h2 className="text-5xl text-center font-bold tracking-tight sm:text-6xl">
+      <div className="w-full py-[7rem] px-4 z-50 bg-[#262626]">
+        <h2 className="text-5xl text-center font-bold tracking-tight sm:text-6xl text-orange-500">
           Our Team
         </h2>
         <div className="max-w-[1240px] my-14 mx-auto grid gap-8">
@@ -346,14 +346,14 @@ const Team = () => {
           <div className="grid grid-cols-2 gap-1">
             {people.slice(0, 2).map((person, i) => (
               <div className="flex items-center justify-center" key={i}>
-                <div className="w-72 h-96 rounded-xl border-2 px-6 pt-8 pb-10 shadow-lg transition-transform hover:scale-105 flex flex-col items-center">
-                  <div className="relative w-36 h-36 rounded-full overflow-hidden border-2">
+                <div className="w-72 h-96  rounded-xl border-3 border-orange-500 px-6 pt-8 pb-10 shadow-lg transition-transform hover:scale-105 flex flex-col items-center">
+                  <div className="relative w-36 h-36 rounded-full overflow-hidden border-2 border-orange-500">
                     <img className="w-full h-full object-cover" src={person.image} alt={person.name} />
                   </div>
-                  <h1 className="mt-4 text-center text-2xl font-bold">{person.name}</h1>
-                  <h3 className="text-center text-lg">{person.role}</h3>
+                  <h1 className="mt-4 text-center text-2xl font-bold text-orange-500">{person.name}</h1>
+                  <h3 className="text-center text-lg text-orange-400">{person.role}</h3>
                   <div className="mt-auto pb-4 flex justify-center">
-                    <a target="_blank" href={person.linkedin} className="text-2xl">
+                    <a target="_blank" href={person.linkedin} className="text-2xl text-orange-500">
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                   </div>
@@ -363,17 +363,18 @@ const Team = () => {
           </div>
 
 
+
           <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {people.slice(2).map((person, i) => (
               <div className="flex items-center justify-center" key={i}>
-                <div className="w-72 h-96 rounded-xl border-2 px-6 pt-8 pb-10 shadow-lg transition-transform hover:scale-105 flex flex-col items-center">
+                <div className="w-72 h-96 bg-[#414040] rounded-xl border-3 border-orange-500 px-6 pt-8 pb-10 shadow-lg transition-transform hover:scale-105 flex flex-col items-center">
                   <div className="relative w-36 h-36 rounded-full overflow-hidden border-2">
                     <img className="w-full h-full object-cover" src={person.image} alt={person.name} />
                   </div>
-                  <h1 className="mt-4 text-center text-2xl font-bold">{person.name}</h1>
-                  <h3 className="text-center text-lg">{person.role}</h3>
+                  <h1 className="mt-4 text-center text-2xl font-bold text-orange-500">{person.name}</h1>
+                  <h3 className="text-center text-lg text-orange-500">{person.role}</h3>
                   <div className="mt-auto pb-4 flex justify-center">
-                    <a target="_blank" href={person.linkedin} className="text-2xl">
+                    <a target="_blank" href={person.linkedin} className="text-2xl text-orange-500">
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                   </div>

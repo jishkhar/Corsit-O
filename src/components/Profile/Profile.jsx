@@ -10,7 +10,7 @@ const Profile = () => {
       <Header />
 
       <div className="h-[100vh] bg-[#080514] text-white pt-40 px-52">
-        <div class="flex h-fit items-start justify-start px-12 py-12 border border-[rgba(173,216,230,0.8)] rounded-2xl">
+        <div class="flex h-fit items-start justify-start px-12 py-12 border border-[rgba(173,216,230,0.8)] rounded-2xl bg-[#0b001056]">
           <div class="flex items-center gap-28">
 
             <div class="max-w-md rounded-3xl p-[0.3rem] bg-gradient-to-b from-slate-300 to-pink-300 dark:from-slate-400 dark:to-[rgba(136,217,244,0.8)]">

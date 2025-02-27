@@ -337,23 +337,30 @@ const people = [
 const Team = () => {
   return (
     <>
-      <div className="w-full py-[7rem] px-4 z-50 bg-[#262626]">
-        <h2 className="text-5xl text-center font-bold tracking-tight sm:text-6xl text-orange-500">
+      <div className="w-full py-[7rem] px-4 z-50 bg-black">
+        <h2 className="text-5xl text-center font-bold tracking-tight sm:text-6xl">
           Our Team
         </h2>
-        <div className="max-w-[1240px] my-14 mx-auto grid gap-8">
+        <div className="max-w-[1240px] my-20 mx-auto grid gap-8">
 
-          <div className="grid grid-cols-2 gap-1">
+          <div className="grid grid-cols-2 gap-4">
             {people.slice(0, 2).map((person, i) => (
               <div className="flex items-center justify-center" key={i}>
-                <div className="w-72 h-96  rounded-xl border-3 border-orange-500 px-6 pt-8 pb-10 shadow-lg transition-transform hover:scale-105 flex flex-col items-center">
-                  <div className="relative w-36 h-36 rounded-full overflow-hidden border-2 border-orange-500">
-                    <img className="w-full h-full object-cover" src={person.image} alt={person.name} />
+                <div className="w-80 h-96 bg-[#1a1a1a] rounded-2xl border-2 border-orange-500 shadow-lg transition-transform hover:scale-105 hover:shadow-2xl flex flex-col items-center p-6">
+
+                  <div className="relative w-44 h-44 rounded-full overflow-hidden border-[4px] border-orange-500 shadow-md">
+                    <img className="w-full h-full object-cover object-center" src={person.image} alt={person.name} />
                   </div>
-                  <h1 className="mt-4 text-center text-2xl font-bold text-orange-500">{person.name}</h1>
-                  <h3 className="text-center text-lg text-orange-400">{person.role}</h3>
-                  <div className="mt-auto pb-4 flex justify-center">
-                    <a target="_blank" href={person.linkedin} className="text-2xl text-orange-500">
+
+                  <h1 className="mt-6 text-center text-2xl font-extrabold text-white">{person.name}</h1>
+                  <h3 className="text-center text-lg text-gray-300">{person.role}</h3>
+
+                  <div className="mt-auto pb-4 flex justify-center space-x-3">
+                    <a
+                      target="_blank"
+                      href={person.linkedin}
+                      className="text-[1.7rem] transition-transform duration-300 hover:scale-125 hover:text-blue-500"
+                    >
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                   </div>
@@ -364,17 +371,26 @@ const Team = () => {
 
 
 
-          <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+
+          <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-20">
             {people.slice(2).map((person, i) => (
               <div className="flex items-center justify-center" key={i}>
-                <div className="w-72 h-96 bg-[#414040] rounded-xl border-3 border-orange-500 px-6 pt-8 pb-10 shadow-lg transition-transform hover:scale-105 flex flex-col items-center">
-                  <div className="relative w-36 h-36 rounded-full overflow-hidden border-2">
-                    <img className="w-full h-full object-cover" src={person.image} alt={person.name} />
+                <div className="w-80 h-96 bg-[#1a1a1a] rounded-2xl border-2 border-orange-500 shadow-lg transition-transform hover:scale-105 hover:shadow-2xl flex flex-col items-center p-6">
+
+                  <div className="relative w-44 h-44 rounded-full overflow-hidden border-[4px] border-orange-400 shadow-md">
+                    <img className="w-full h-full object-cover object-center" src={person.image} alt={person.name} />
                   </div>
-                  <h1 className="mt-4 text-center text-2xl font-bold text-orange-500">{person.name}</h1>
-                  <h3 className="text-center text-lg text-orange-500">{person.role}</h3>
-                  <div className="mt-auto pb-4 flex justify-center">
-                    <a target="_blank" href={person.linkedin} className="text-2xl text-orange-500">
+
+                  <h1 className="mt-6 text-center text-2xl font-extrabold text-white">{person.name}</h1>
+                  <h3 className="text-center text-lg text-gray-300">{person.role}</h3>
+
+                  <div className="mt-auto pb-4 flex justify-center space-x-3">
+                    <a
+                      target="_blank"
+                      href={person.linkedin}
+                      className="text-[1.7rem] transition-transform duration-300 hover:scale-125 hover:text-blue-500"
+                    >
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                   </div>
@@ -382,6 +398,8 @@ const Team = () => {
               </div>
             ))}
           </div>
+
+
         </div>
       </div>
     </>

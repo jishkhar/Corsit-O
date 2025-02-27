@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 80);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const navLinks = [
         { path: '/', label: 'HOME' },
@@ -12,13 +22,13 @@ const Header = () => {
         { path: 'projects', label: 'PROJECTS' },
         { path: 'team', label: 'TEAM' },
         { path: 'alumni', label: 'ALUMNI' },
-        { path: 'register', label: 'REGISTER' },
-        { path: 'contact', label: 'CONTACT' }
+        { path: 'contact', label: 'CONTACT' },
+        { path: 'login', label: 'LOGIN' }
     ];
 
     return (
-        <header className='bg-[#171717] h-20'>
-            <nav className='flex justify-between items-center w-[92%] mx-auto py-6'>
+        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${scrolled ? 'bg-[#070517] bg-opacity-100' : 'bg-[#070412]'}`}>
+            <nav className='flex justify-between items-center w-[92%] mx-auto py-4'>
                 <div>
                     <Link to='/'>
                         <div>

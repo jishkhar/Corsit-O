@@ -50,27 +50,48 @@ const projects = [
 const Projects = () => {
   return (
     <>
-      <div className='flex justify-center items-center w-[80%] mx-auto gap-72'>
-        <h1 className='text-4xl font-bold'>Bots & Projects</h1>
-        <div>
-          Group projects thrive on synergy, combining diverse skills to drive innovation and boost efficiency. Collaboration enables individuals to contribute their expertise toward shared goals, resulting in meaningful outcomes. A unified vision fosters cohesion and alignment, ensuring ambitious objectives are achieved with greater impact.
+      <div className='flex flex-col justify-center items-center w-[80%] mx-auto gap-10 text-center py-16'>
+        <div className='mb-4'>
+          <h1 className='text-5xl font-semibold'>Bots & Projects</h1>
+        </div>
+        <div className=' max-w-8xl px-6 text-lg text-gray-300'>
+          Robotics projects thrive on teamwork, where diverse expertise fuels innovation and problem-solving. By collaborating, members contribute unique skills in design, programming, and engineering to develop cutting-edge robotic solutions. A shared vision fosters creativity, efficiency, and technical excellence, ensuring projects are executed with precision. Through hands-on experience, members gain practical knowledge, refine problem-solving abilities, and push the boundaries of robotics, shaping the future of automation and intelligent systems.
         </div>
       </div>
 
 
-      <div className="flex justify-center">
-        <div id="projects" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+
+      <div className="flex justify-center mb-20">
+        <div id="projects" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project, index) => (
-            <div key={index} className="border rounded-lg shadow-lg overflow-hidden w-[33rem]">
-              <img src={project.image} alt={project.title} className="w-full h-56 object-cover" />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold">{project.title}</h2>
-                <p className="text-gray-600 mt-2">{project.description}</p>
+            <div
+              key={index}
+              className="relative w-[33rem] rounded-xl border border-orange-500 bg-black/60 backdrop-blur-md shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-orange-500/50 p-4"
+            >
+              
+              <div className="absolute inset-0 rounded-xl border border-orange-400 opacity-30 blur-md"></div>
+
+              
+              <div className="rounded-lg overflow-hidden border-2 border-orange-500">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-72 object-cover rounded-lg transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+
+              
+              <div className="p-6">
+                <h2 className="text-3xl font-bold text-orange-400">{project.title}</h2>
+                <p className="text-gray-300 mt-3 text-lg">{project.description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+
 
     </>
   )

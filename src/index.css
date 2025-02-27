@@ -5,3 +5,7 @@
     color: white;
   }
    */
+
+body {
+  @apply bg-black text-white;
+}

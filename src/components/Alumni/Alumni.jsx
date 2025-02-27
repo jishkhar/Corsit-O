@@ -450,29 +450,46 @@ const people = [
 
 export default function Alumni() {
   return (
-    <div className="py-20 sm:py-40">
+    <div className="py-20 sm:py-40 bg-gradient-to-b from-black via-gray-800 to-gray-900 text-white">
       <div className="pt-8 mx-auto max-w-screen-2xl px-8 lg:px-12 flex flex-col items-center text-center">
         <div className="max-w-3xl">
-          <h2 className="text-6xl font-bold tracking-tight sm:text-7xl">
+          <h2 className="text-6xl font-bold tracking-tight sm:text-7xl text-orange-500">
             Meet our Alumni
           </h2>
-          <p className="mt-8 text-xl leading-9">
+          <p className="mt-8 text-xl leading-9 text-gray-300">
             Carrying Forward the Legacy and Making an Impact!
           </p>
         </div>
-        <ul role="list" className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+        <ul
+          role="list"
+          className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10"
+        >
           {people.map((person, i) => (
-            <li key={i} className="flex flex-col items-center text-center rounded-md py-5 px-3 border-2">
-              <img className="h-30 w-30 rounded-full" src={person.ima} alt="" />
+            <li
+              key={i}
+              className="flex flex-col items-center text-center rounded-xl py-6 px-4 border-2 border-orange-500 bg-black/60 backdrop-blur-md shadow-lg hover:shadow-orange-500/50 transition-all duration-300"
+            >
+              <div className="w-32 h-32 rounded-lg overflow-hidden border-4 border-orange-400 shadow-md">
+                <img
+                  className="w-full h-full object-cover"
+                  src={person.ima}
+                  alt={person.name}
+                />
+              </div>
               <div className="mt-5">
-                <h3 className="text-xl font-semibold leading-7 tracking-tight">
+                <h3 className="text-xl font-semibold leading-7 tracking-tight text-orange-400">
                   {person.name}
                 </h3>
-                <p className="text-md font-semibold leading-6">
+                <p className="text-md font-semibold leading-6 text-gray-300">
                   {person.role}
                 </p>
-                <a href={person.linkedin} target="_blank" rel="noreferrer">
-                  <FontAwesomeIcon icon={faLinkedin} className="text-3xl mt-2" />
+                <a
+                  href={person.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-3xl mt-3 text-gray-400 hover:text-orange-500 transition-colors duration-300"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
                 </a>
               </div>
             </li>

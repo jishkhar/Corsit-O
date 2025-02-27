@@ -337,7 +337,7 @@ const people = [
 const Team = () => {
   return (
     <>
-      <div className="w-full py-[7rem] px-4 z-50 bg-black">
+      <div className="w-full py-[7rem] px-4 z-50 bg-[#080514]">
         <h2 className="text-5xl text-center font-bold tracking-tight sm:text-6xl">
           Our Team
         </h2>
@@ -346,9 +346,9 @@ const Team = () => {
           <div className="grid grid-cols-2 gap-4">
             {people.slice(0, 2).map((person, i) => (
               <div className="flex items-center justify-center" key={i}>
-                <div className="w-80 h-96 bg-[#1a1a1a] rounded-2xl border-2 border-orange-500 shadow-lg transition-transform hover:scale-105 hover:shadow-2xl flex flex-col items-center p-6">
+                <div className="w-80 h-96 bg-gray-900 backdrop-blur-3xl rounded-2xl border-2 border-[rgba(173,216,230,0.8)] shadow-lg transition-transform hover:scale-105 hover:shadow-2xl flex flex-col items-center p-6">
 
-                  <div className="relative w-44 h-44 rounded-full overflow-hidden border-[4px] border-orange-500 shadow-md">
+                  <div className="relative w-44 h-44 rounded-full overflow-hidden border-[4px] border-[rgba(173,216,230,0.8)] shadow-md">
                     <img className="w-full h-full object-cover object-center" src={person.image} alt={person.name} />
                   </div>
 
@@ -359,7 +359,7 @@ const Team = () => {
                     <a
                       target="_blank"
                       href={person.linkedin}
-                      className="text-[1.7rem] transition-transform duration-300 hover:scale-125 hover:text-blue-500"
+                      className="text-[1.9rem] transition-transform duration-300 hover:scale-125 hover:text-blue-500"
                     >
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
@@ -376,9 +376,9 @@ const Team = () => {
           <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-20">
             {people.slice(2).map((person, i) => (
               <div className="flex items-center justify-center" key={i}>
-                <div className="w-80 h-96 bg-[#1a1a1a] rounded-2xl border-2 border-orange-500 shadow-lg transition-transform hover:scale-105 hover:shadow-2xl flex flex-col items-center p-6">
+                <div className="w-80 h-96 bg-gray-900 backdrop-blur-3xl rounded-2xl border-2 border-[rgba(173,216,230,0.8)] shadow-lg transition-transform hover:scale-105 hover:shadow-2xl flex flex-col items-center p-6">
 
-                  <div className="relative w-44 h-44 rounded-full overflow-hidden border-[4px] border-orange-400 shadow-md">
+                  <div className="relative w-44 h-44 rounded-full overflow-hidden border-[4px] border-[rgba(173,216,230,0.8)] shadow-md">
                     <img className="w-full h-full object-cover object-center" src={person.image} alt={person.name} />
                   </div>
 
@@ -389,7 +389,7 @@ const Team = () => {
                     <a
                       target="_blank"
                       href={person.linkedin}
-                      className="text-[1.7rem] transition-transform duration-300 hover:scale-125 hover:text-blue-500"
+                      className="text-[1.9rem] transition-transform duration-300 hover:scale-125 hover:text-blue-500"
                     >
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>

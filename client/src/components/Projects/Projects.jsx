@@ -10,16 +10,6 @@ const Projects = () => {
       .catch((error) => console.error("Error fetching projects data:", error));
   }, []);
 
-  // Function to handle abstract download
-  const handleDownload = (fileUrl) => {
-    const link = document.createElement("a");
-    link.href = `http://localhost:5000/${fileUrl}`;
-    link.setAttribute("download", fileUrl);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <>
       <div className="flex flex-col justify-center items-center w-[80%] mx-auto gap-10 text-center py-16">
@@ -51,13 +41,15 @@ const Projects = () => {
                 <p className="text-gray-300 mt-3 text-lg">{project.projectDescription}</p>
                 <p className="text-gray-400 mt-2">By: {project.name}</p>
 
-                {/* Download Button */}
-                <button
-                  onClick={() => handleDownload(project.abstractDoc)}
-                  className="mt-4 px-4 py-2 bg-orange-500 text-black font-bold rounded-lg hover:bg-orange-600 transition"
+                {/* Download Abstract Link */}
+                <a
+                  href={`http://localhost:5000/${project.abstractDoc}`}
+                  download
+                  
+                  className="mt-4 px-4 py-2 bg-orange-500 text-black font-bold rounded-lg hover:bg-orange-600 transition inline-block"
                 >
                   Download Abstract
-                </button>
+                </a>
               </div>
             </div>
           ))}

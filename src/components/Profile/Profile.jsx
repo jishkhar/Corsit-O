@@ -21,7 +21,7 @@ const Profile = () => {
       <Header />
 
       <div className="h-fit bg-[#080514] text-white py-40 px-52">
-        <div className="flex h-fit items-start justify-start px-12 py-12 border border-[rgba(173,216,230,0.8)] rounded bg-[#0b001056]">
+        <div className="flex h-fit items-start justify-start px-12 py-12 border border-[rgba(173,216,230,0.8)] rounded-xl bg-[#0b001056]">
           <div className="flex items-center gap-28">
 
             <div className="max-w-md rounded-3xl p-[0.3rem] bg-gradient-to-b from-slate-300 to-pink-300 dark:from-slate-400 dark:to-[rgba(136,217,244,0.8)]">
@@ -44,21 +44,7 @@ const Profile = () => {
 
                 <div className="mb-8 flex items-center gap-6">
                   <h2 className="text-3xl font-bold text-white">Designation:</h2>
-                  <select className="p-4 w-full rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                    <option value="" disabled selected>Choose Designation</option>
-                    <option value="1st-year">1st Year</option>
-                    <option value="2nd-year">2nd Year</option>
-                    <option value="3rd-year">3rd Year</option>
-                    <option value="4th-year">4th Year</option>
-                    <option value="chairman">Chairman</option>
-                    <option value="vice-chairman">Vice-Chairman</option>
-                    <option value="tech-lead">Tech Lead</option>
-                    <option value="treasurer">Treasurer</option>
-                    <option value="web-dev-lead">Web Dev Lead</option>
-                    <option value="android-dev-lead">Android Dev Lead</option>
-                    <option value="photoshop-lead">Photoshop Lead</option>
-                    <option value="digital-lead">Digital Lead</option>
-                  </select>
+                  <p className="text-gray-300 text-2xl">2nd Year</p>
                 </div>
 
                 <div className="flex items-center gap-8">

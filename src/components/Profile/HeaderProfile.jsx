@@ -70,7 +70,7 @@ const Header = () => {
                                     Change Password
                                 </NavLink>
                                 <NavLink 
-                                    to="/login" 
+                                    to="/" 
                                     className={({ isActive }) => `block px-4 py-3 hover:bg-gray-900 ${isActive ? 'bg-gray-300' : ''}`}
                                 >
                                     Logout

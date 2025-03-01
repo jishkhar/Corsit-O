@@ -26,20 +26,18 @@ const Team = () => {
 
   return (
     <>
-      <div className="w-full py-[7rem] px-4 z-50 bg-[#080514]">
-        <h2 className="text-5xl text-center font-bold tracking-tight sm:text-6xl">
+      <div className="w-full min-h-screen py-[7rem] px-4 z-50 bg-[#272928]">
+        <h2 className="text-6xl text-[#ed5a2d] text-center font-bold tracking-tight sm:text-6xl">
           Our Team
         </h2>
         <div className="max-w-[1240px] my-20 mx-auto grid gap-8">
 
-          {/* First row with only two profiles */}
           <div className="grid grid-cols-2 gap-4">
             {teamMembers.slice(0, 2).map((person, i) => (
               <ProfileCard key={i} person={person} />
             ))}
           </div>
 
-          {/* Remaining profiles with 4 per row */}
           <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-20">
             {teamMembers.slice(2).map((person, i) => (
               <ProfileCard key={i} person={person} />

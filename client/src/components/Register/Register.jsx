@@ -41,7 +41,7 @@ const Register = () => {
 
           <div>
             <label className="block text-lg font-medium text-gray-300">Year</label>
-            <select className="w-full h-12 px-4 text-lg border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <select className="w-full h-12 px-4 text-lg border border-gray-600 bg-[#272928] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
               <option value="" disabled selected>Select Year</option>
               <option value="1">First Year</option>
               <option value="2">Second Year</option>

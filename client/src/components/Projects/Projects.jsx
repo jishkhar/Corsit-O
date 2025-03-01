@@ -14,7 +14,7 @@ const Projects = () => {
     <>
       <div className="flex flex-col justify-center items-center w-[80%] mx-auto gap-10 text-center py-16">
         <div className="mb-4">
-          <h1 className="text-5xl font-semibold">Bots & Projects</h1>
+          <h1 className="text-6xl font-semibold">Bots & Projects</h1>
         </div>
         <div className="max-w-4xl px-6 text-lg text-gray-300">
           Robotics projects thrive on teamwork, where diverse expertise fuels innovation and problem-solving.

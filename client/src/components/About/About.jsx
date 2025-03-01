@@ -7,10 +7,10 @@ import three from '../../assets/founders/team1c.jpg';
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-b from-black via-[#1a1a1a] to-black text-white py-20">
-      <div className="flex justify-center text-5xl font-semibold mb-20">About Us</div>
-      
-      <div className="flex justify-center items-center w-[80%] mx-auto my-20 gap-x-10">
+    <div className="bg-[#272928] text-white py-40">
+      <div className="flex justify-center text-6xl text-[#ed5a2d] font-semibold mb-20">About Us</div>
+
+      <div className="flex justify-center items-center w-[80%] mx-auto mt-20 mb-40 gap-x-10">
         <div className="w-[55%]">
           <img src="https://placehold.co/700x500.png" className="rounded-xl shadow-lg" alt="About Us" />
         </div>
@@ -20,35 +20,54 @@ const About = () => {
           </p>
         </div>
       </div>
-      
-      <div className="text-center text-5xl font-semibold mt-20">Mentors</div>
-      <div className="flex justify-center w-[80%] mx-auto mt-10 gap-10 flex-wrap">
-        {[{ img: dean, name: "Dr. V Siddeswara Prasad", role: "Robotics Lab Co-ordinator" },
-          { img: mentor, name: "Sridhara H S", role: "Robotics Lab Mentor" }].map((person, index) => (
-          <div key={index} className="bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-2xl shadow-lg p-6 text-center w-72 h-96 flex flex-col justify-between transform transition-all duration-300 hover:scale-105 hover:shadow-orange-500/50">
-            <div className="w-40 h-40 mx-auto mb-4">
-              <img src={person.img} alt="Profile" className="w-full h-full rounded-full object-cover border-4 border-orange-500 shadow-md" />
+
+      <div className="text-center text-5xl text-[#ed5a2d] font-semibold mt-40 mb-20">Mentors</div>
+
+      <div className="flex justify-center w-[80%] mx-auto mt-10 gap-60 flex-wrap">
+        {[
+          { img: dean, name: "Dr. V Siddeswara Prasad", role: "Robotics Lab Co-ordinator" },
+          { img: mentor, name: "Sridhara H S", role: "Robotics Lab Mentor" }
+        ].map((person, index) => (
+          <div
+            key={index}
+            className="group relative p-8 w-80 h-[450px] bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-orange-500/40"
+          >
+            <div className="w-60 h-60 mx-auto mb-6 rounded-xl overflow-hidden border-4 border-orange-500 shadow-md">
+              <img className="w-full h-full object-cover" src={person.img} alt="Profile" />
             </div>
-            <h2 className="text-xl font-bold text-orange-400">{person.name}</h2>
-            <p className="text-sm text-gray-300 mt-1">{person.role}</p>
+            <p className="mt-11 text-2xl font-semibold text-orange-400">{person.name}</p>
+            <p className="text-lg text-gray-300 mt-3">{person.role}</p>
           </div>
         ))}
       </div>
 
-      <div className="text-center text-5xl font-semibold mt-20">Founders</div>
-      <div className="flex justify-center w-[80%] mx-auto mt-10 gap-10 flex-wrap">
-        {[{ img: one, name: "Kiran B K", role: "Product Owner at Bosch Global Software" },
+
+
+
+      <div className="text-center text-5xl text-[#ed5a2d] font-semibold mt-52 mb-20">Founders</div>
+
+      <div className="flex justify-center w-[80%] mx-auto mt-10 gap-16 flex-wrap">
+        {[
+          { img: one, name: "Kiran B K", role: "Product Owner at Bosch Global Software" },
           { img: two, name: "Shivaswaroop P", role: "Procurement Specialist at ZF Group" },
-          { img: three, name: "Divyanshu Sahay", role: "Firmware Engineer at Intel Corporation" }].map((person, index) => (
-          <div key={index} className="bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-2xl shadow-lg p-6 text-center w-72 h-96 flex flex-col justify-between transform transition-all duration-300 hover:scale-105 hover:shadow-orange-500/50">
-            <div className="w-40 h-40 mx-auto mb-4">
-              <img src={person.img} alt="Profile" className="w-full h-full rounded-full object-cover border-4 border-orange-500 shadow-md" />
+          { img: three, name: "Divyanshu Sahay", role: "Firmware Engineer at Intel Corporation" }
+        ].map((person, index) => (
+          <div
+            key={index}
+            className="group relative p-8 w-80 h-[450px] bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-orange-500/40"
+          >
+            <div className="w-60 h-60 mx-auto mb-6 rounded-xl overflow-hidden border-4 border-orange-500 shadow-md">
+              <img className="w-full h-full object-cover" src={person.img} alt="Profile" />
             </div>
-            <h2 className="text-xl font-bold text-orange-400">{person.name}</h2>
-            <p className="text-sm text-gray-300 mt-1">{person.role}</p>
+            <p className="mt-11 text-2xl font-semibold text-orange-400">{person.name}</p>
+            <p className="text-lg text-gray-300 mt-3">{person.role}</p>
           </div>
         ))}
       </div>
+
+
+
+
     </div>
   );
 };

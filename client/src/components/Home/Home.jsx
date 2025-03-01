@@ -1,5 +1,8 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import lfr from '../../assets/home/lfr.jpg'
+import gesture from '../../assets/home/gcr.jpg'
+import smartHome from '../../assets/home/sha.webp'
 
 const Home = () => {
 
@@ -23,18 +26,36 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {[
-                { title: "Line Following Robot", description: "An autonomous robot that follows a path using sensors.", tags: ["Arduino", "Sensors"] },
-                { title: "Gesture Controlled Bot", description: "A robot that responds to hand gestures using OpenCV.", tags: ["Python", "OpenCV"] },
-                { title: "Smart Home Automation", description: "IoT-based home automation for energy efficiency.", tags: ["IoT", "NodeMCU"] }
+                {
+                  title: "Line Following Robot",
+                  description: "An autonomous robot that follows a path using sensors.",
+                  tags: ["Arduino", "Sensors"],
+                  image: lfr
+                },
+                {
+                  title: "Gesture Controlled Bot",
+                  description: "A robot that responds to hand gestures using OpenCV.",
+                  tags: ["Python", "OpenCV"],
+                  image: gesture
+                },
+                {
+                  title: "Smart Home Automation",
+                  description: "IoT-based home automation for energy efficiency.",
+                  tags: ["IoT", "NodeMCU"],
+                  image: smartHome
+                }
               ].map((project, index) => (
                 <div
                   key={index}
-                  className="bg-[#1f1f1f] border border-[#ed5a2d] rounded-2xl overflow-hidden shadow-lg transition hover:scale-105 duration-300"
+                  className="bg-[#1f1f1f] border-2 border-[#ed5a2d] rounded-2xl overflow-hidden shadow-lg transition hover:scale-105 duration-300"
                 >
-                  <div className="h-60 flex items-center justify-center bg-[#333]"></div>
+                  <img
+                    src={project.image}
+                    className="w-full h-72 object-cover"
+                  />
                   <div className="p-6">
                     <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                    <p className="text-lg  mb-4">{project.description}</p>
+                    <p className="text-lg mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, idx) => (
                         <span key={idx} className="bg-[#ed5a2d] text-white px-3 py-1 rounded-full text-[15px]">
@@ -46,6 +67,7 @@ const Home = () => {
                 </div>
               ))}
             </div>
+
 
             <div className="text-center">
               <NavLink to="/projects" onClick={() => window.scrollTo(0, 0)}>

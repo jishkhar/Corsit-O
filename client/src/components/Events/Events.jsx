@@ -1,15 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import rc1 from '../../assets/events/robocor/1.png';
+import rc2 from '../../assets/events/robocor/2.png';
+import rc3 from '../../assets/events//robocor/3.png';
+
 const eventsData = [
   {
     title: 'RoboCor',
     description: 'Robocor, a nationally renowned Robotics Competition, which is one of the biggest events in Karnataka. It provides a platform for participants to showcase their innovative designs and compete for glory. In Robocor, the team has successfully organized several events such as Dcode, Spardha, Rugged Rage, Robo Soccer, Arduino Clash, Binary Rash, Project Symposium, Paper Presentation, and Init_Rc.',
     images: [
-      'https://source.unsplash.com/400x300/?technology',
-      'https://source.unsplash.com/400x500/?conference',
-      'https://source.unsplash.com/300x400/?innovation'
+      rc1,
+      rc2,
+      rc3
     ],
+
     register: true
   },
   {
@@ -53,10 +58,18 @@ const Events = () => {
           <div key={index} className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} gap-16 md:gap-24 py-16`}>
             <div className='md:w-2/5 grid grid-cols-2 gap-4 relative'>
               {event.images.map((img, imgIndex) => (
-                <img key={imgIndex} src={img} alt={`${event.title} ${imgIndex + 1}`}
-                  className={`object-cover rounded-xl shadow-lg w-full h-48 ${imgIndex === 1 ? 'top-0 left-20 absolute' : ''} ${imgIndex === 2 ? 'bottom-0 left-0 absolute' : ''}`} />
+                <img
+                  key={imgIndex}
+                  src={img}
+                  alt={`${event.title} ${imgIndex + 1}`}
+                  className={`object-cover rounded-xl shadow-lg w-72 h-72 transition-transform duration-300
+                      ${imgIndex === 0 ? 'rotate-[-6deg] translate-x-4 translate-y-4 z-10' : ''}  
+                      ${imgIndex === 1 ? 'rotate-[8deg] -translate-x-6 -translate-y-2 z-20' : ''}  
+                      ${imgIndex === 2 ? 'rotate-[6deg] translate-x-28 translate-y-[-10%] z-0' : ''}`}
+                />
               ))}
             </div>
+
             <div className='md:w-3/5 p-8 md:p-12 text-center md:text-left'>
               <h3 className='text-5xl font-semibold text-[#ed5a2d]'>{event.title}</h3>
               <p className='text-[#f7ffff] mt-4 text-xl leading-relaxed'>{event.description}</p>

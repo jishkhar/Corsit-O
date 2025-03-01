@@ -25,46 +25,50 @@ const Home = () => {
             <p className="text-lg">Join us in our exciting robotics events and workshops</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                date: 'Date',
-                title: 'RoboExpo',
-                description: 'A showcase of cutting-edge robotics, AI, and automation innovations.',
-                location: '📍 Birla Auditorium',
-                icon: '📦',
-              },
-              {
-                date: 'Date',
-                title: 'Robotics Workshop',
-                description: 'Learn the basics of robotics and automation in this hands-on workshop.',
-                location: '📍 Location',
-                icon: '💡',
-              },
-              {
-                date: 'Date',
-                title: 'RoboCor',
-                description: 'The ultimate battleground for innovation, where robots clash and creativity thrives!',
-                location: '📍 SIT',
-                icon: '🖱️',
-              },
-            ].map((event, index) => (
-              <div
-                key={index}
-                className="bg-[#1f1f1f] border border-[#ed5a2d] rounded-2xl overflow-hidden shadow-lg transition hover:scale-105 duration-300 p-6 text-center"
-              >
-                <div className="text-5xl mb-4">{event.icon}</div>
-                <h3 className="text-2xl font-bold mt-2 mb-3">{event.title}</h3>
-                <p className="text-lg mb-4">{event.description}</p>
-                <p className="text-[#ed5a2d] text-sm font-semibold">{event.date}</p>
-                <p className="text-gray-400 text-sm mb-4">{event.location}</p>
-                <NavLink to="/register" onClick={() => window.scrollTo(0, 0)}>
-                  <button className="bg-[#ed5a2d] hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition hover:scale-110 cursor-pointer">
-                    Register Now
-                  </button>
-                </NavLink>
-              </div>
-            ))}
-          </div>
+  {[
+    {
+      date: 'Date',
+      title: 'RoboExpo',
+      description: 'A showcase of cutting-edge robotics, AI, and automation innovations.',
+      location: '📍 Birla Auditorium',
+      icon: '📦',
+    },
+    {
+      date: 'Date',
+      title: 'Robotics Workshop',
+      description: 'Learn the basics of robotics and automation in this hands-on workshop.',
+      location: '📍 Location',
+      icon: '💡',
+    },
+    {
+      date: 'Date',
+      title: 'RoboCor',
+      description: 'The ultimate battleground for innovation, where robots clash and creativity thrives!',
+      location: '📍 SIT',
+      icon: '🖱️',
+    },
+  ].map((event, index) => (
+    <div
+      key={index}
+      className="bg-[#1a1a1a] border border-[#ed5a2d] rounded-2xl shadow-lg overflow-hidden p-6 text-center backdrop-blur-md bg-opacity-80 relative transition-all duration-300 hover:scale-[1.05] hover:border-orange-500"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#ed5a2d30] to-transparent opacity-20"></div>
+
+      <div className="text-6xl mb-4">{event.icon}</div>
+      <h3 className="text-2xl font-extrabold text-white mb-2">{event.title}</h3>
+      <p className="text-gray-300 text-lg mb-4">{event.description}</p>
+      <p className="text-[#ed5a2d] text-sm font-semibold tracking-widest">{event.date}</p>
+      <p className="text-gray-400 text-sm mb-4">{event.location}</p>
+
+      <NavLink to="/register" onClick={() => window.scrollTo(0, 0)}>
+        <button className="bg-gradient-to-r from-[#ed5a2d] to-orange-500 hover:from-orange-500 hover:to-[#ed5a2d] text-white font-bold py-2 px-6 rounded-full shadow-md transition-all duration-300 hover:scale-110">
+          Register Now
+        </button>
+      </NavLink>
+    </div>
+  ))}
+</div>
+
         </div>
       </div>
 

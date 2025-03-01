@@ -33,7 +33,7 @@ const Projects = () => {
               >
                 <div className="absolute inset-0 rounded-xl border border-orange-400 opacity-30 blur-md"></div>
 
-                {/* Image Section */}
+                
                 <div className="w-full rounded-lg overflow-hidden border-2 border-orange-500">
                   <img
                     src={`http://localhost:5000/${project.projectPhoto}`}
@@ -42,13 +42,13 @@ const Projects = () => {
                   />
                 </div>
 
-                {/* Text Content */}
+                
                 <div className="flex flex-col flex-grow p-4">
                   <h2 className="text-2xl font-bold text-orange-400">{project.projectTitle}</h2>
                   <p className="text-gray-300 mt-2 text-base">{project.projectDescription}</p>
                   <p className="text-gray-400 mt-1 text-sm">By: {project.name}</p>
 
-                  {/* Button (Pushed to Bottom) */}
+                  
                   <div className="mt-auto">
                     {project.abstractDoc ? (
                       <a

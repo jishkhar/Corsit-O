@@ -21,6 +21,38 @@ const About = () => {
         </div>
       </div>
 
+      <div className="py-24 relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+              Our Achievements
+            </h2>
+            <div className="h-1 w-24 bg-red-500 mx-auto mt-4"></div>
+            <p className="text-lg text-gray-300 mt-4">
+              Celebrating our success stories and milestones
+            </p>
+          </div>
+
+          <div className="flex justify-center w-[80%] mx-auto mt-10 gap-16 flex-wrap">
+            {[
+              { title: "National Robotics Championship", award: "First Place in Technical Innovation", year: "2023" },
+              { title: "IEEE Robotics Competition", award: "Best Innovation Award", year: "2022" },
+              { title: "Smart India Hackathon", award: "Winner in Hardware Category", year: "2022" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="group relative p-8 w-80 h-[300px] bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-orange-500/40"
+              >
+                
+                <p className="mt-11 text-2xl font-semibold text-orange-400">{item.title}</p>
+                <p className="text-lg text-gray-300 mt-3">{item.award}</p>
+                <p className="text-xl font-bold text-orange-500 mt-2">{item.year}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="text-center text-5xl text-[#ed5a2d] font-semibold mt-40 mb-20">Mentors</div>
 
       <div className="flex justify-center w-[80%] mx-auto mt-10 gap-60 flex-wrap">
@@ -40,34 +72,6 @@ const About = () => {
           </div>
         ))}
       </div>
-
-
-
-
-      <div className="text-center text-5xl text-[#ed5a2d] font-semibold mt-52 mb-20">Founders</div>
-
-      <div className="flex justify-center w-[80%] mx-auto mt-10 gap-16 flex-wrap">
-        {[
-          { img: one, name: "Kiran B K", role: "Product Owner at Bosch Global Software" },
-          { img: two, name: "Shivaswaroop P", role: "Procurement Specialist at ZF Group" },
-          { img: three, name: "Divyanshu Sahay", role: "Firmware Engineer at Intel Corporation" }
-        ].map((person, index) => (
-          <div
-            key={index}
-            className="group relative p-8 w-80 h-[450px] bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-orange-500/40"
-          >
-            <div className="w-60 h-60 mx-auto mb-6 rounded-xl overflow-hidden border-4 border-orange-500 shadow-md">
-              <img className="w-full h-full object-cover" src={person.img} alt="Profile" />
-            </div>
-            <p className="mt-11 text-2xl font-semibold text-orange-400">{person.name}</p>
-            <p className="text-lg text-gray-300 mt-3">{person.role}</p>
-          </div>
-        ))}
-      </div>
-
-
-
-
     </div>
   );
 };

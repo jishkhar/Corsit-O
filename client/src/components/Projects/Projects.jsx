@@ -29,7 +29,8 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="relative w-full max-w-md rounded-xl border border-orange-500 bg-black/60 backdrop-blur-md shadow-lg transform transition-all duration-300 hover:scale-[1.03] hover:shadow-orange-500/50 p-6 flex flex-col justify-between h-full"
+                className="relative w-full max-w-md rounded-xl border border-orange-500 bg-black/40 
+                backdrop-blur-xl shadow-lg transform transition-all duration-300 hover:scale-[1.03] hover:shadow-orange-500/50 p-6 flex flex-col justify-between h-full"
               >
                 <div className="absolute inset-0 rounded-xl border border-orange-400 opacity-30 blur-md"></div>
 

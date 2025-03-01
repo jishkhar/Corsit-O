@@ -35,9 +35,12 @@ const About = () => {
 
           <div className="flex justify-center w-[80%] mx-auto mt-10 gap-16 flex-wrap">
             {[
-              { title: "National Robotics Championship", award: "First Place in Technical Innovation", year: "2023" },
-              { title: "IEEE Robotics Competition", award: "Best Innovation Award", year: "2022" },
-              { title: "Smart India Hackathon", award: "Winner in Hardware Category", year: "2022" },
+              { title: "IoT Track Prize in NMIT Hacks, 2024", award: "1st Rank", year: "" },
+              { title: "INTERNAL SMART INDIA HACKATHON, 2023", award: "1st Rank", year: "" },
+              { title: "KURUKSHETRA 13', IIT DELHI, IIT ROORKEE", award: "Technical Innovation", year: "" },
+              { title: "Space Junk, BMSCE", award: "1st Prize", year: "" },
+              { title: "IOT challenge IIT Bombay, 2019", award: "2nd Rank", year: "" },
+              { title: "QUARK (LFR) at BITS Goa", award: "3nd Rank", year: "" },
             ].map((item, index) => (
               <div
                 key={index}

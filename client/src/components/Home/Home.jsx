@@ -99,9 +99,9 @@ const Home = () => {
                   className="bg-[#1f1f1f] border border-[#ed5a2d] rounded-2xl overflow-hidden shadow-lg transition hover:scale-105 duration-300 p-6 text-center"
                 >
                   <div className="text-5xl mb-4">{event.icon}</div>
-                  <p className="text-[#ed5a2d] text-sm font-semibold">{event.date}</p>
                   <h3 className="text-2xl font-bold mt-2 mb-3">{event.title}</h3>
                   <p className="text-lg mb-4">{event.description}</p>
+                  <p className="text-[#ed5a2d] text-sm font-semibold">{event.date}</p>
                   <p className="text-gray-400 text-sm mb-4">{event.location}</p>
                   <NavLink to="/register" onClick={() => window.scrollTo(0, 0)}>
                     <button className="bg-[#ed5a2d] hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition hover:scale-110 cursor-pointer">
